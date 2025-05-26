@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zz
+  labels:
+    app: zz
+    service: zz
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zz
+      service: zz
+  template:
+    metadata:
+      labels:
+        app: zz
+        service: zz
+    spec:
+      containers:
+      - name: zz-container
+        image: hhana982/zz:1.<version>
+        ports:
+        - containerPort: 5000
+        env: 
